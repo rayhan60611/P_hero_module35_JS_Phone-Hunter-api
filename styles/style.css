@@ -1,0 +1,56 @@
+#input-search {
+  font-weight: 700;
+  font-size: larger;
+  width: 150px;
+  border: 0;
+  outline-color: transparent;
+  border: 1px solid #0d6efd;
+}
+
+#input-search:hover {
+  font-weight: 700;
+  font-size: larger;
+  width: 500px;
+  transition: width 0.5s ease-in-out;
+}
+
+#parent-div {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.mycard {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+.mycard:hover {
+  transform: scale(1.02);
+  transition: all 0.2s ease-in;
+}
+
+@media screen and (max-width: 789px) {
+  #parent-div {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  #input-search:hover {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #parent-div {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+
+  #input-search:hover {
+    width: 300px;
+  }
+}
