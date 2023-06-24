@@ -7,6 +7,18 @@ function getElement(value) {
 const btnSearch = getElement("btn-search");
 const inputSearch = getElement("input-search");
 
+// Execute a function when the user presses a key on the keyboard
+inputSearch.addEventListener("keypress", function (event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    loadData(inputSearch.value);
+    spinner(true);
+  }
+});
+
 // spinner function
 const btnSpinner = getElement("btn-spinner");
 function spinner(Value) {
