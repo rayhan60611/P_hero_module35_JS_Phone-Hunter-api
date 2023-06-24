@@ -86,4 +86,12 @@ async function phoneDetails(slug) {
 function displayModalDetails(element) {
   const modalTitle = getElement("modal-title-id");
   modalTitle.innerHTML = element.name;
+  const modalBody = getElement("modal-body-id");
+  modalBody.innerHTML = `
+  <p class="text-danger">Storage: <span class="text-info" >${element.mainFeatures.storage}</span></p>
+  <p class="text-danger">RAM:<span class="text-warning"> ${element.mainFeatures.memory}</span></p>
+  <p class="text-danger">CPU:<span class="text-primary"> ${element.mainFeatures.chipSet}</span></p>
+  <p class="text-danger">CPU:<span class="text-dark"> ${element.mainFeatures.chipSet}</span></p>
+  <p class="text-danger">Release Date: <span class="text-success">${element.releaseDate}</span></p>
+  `;
 }
